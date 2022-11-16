@@ -1,0 +1,131 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <IsPackable>false</IsPackable>
+    <SpaRoot>ClientApp\</SpaRoot>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+
+    <!-- Set this to true if you enable server-side prerendering -->
+    <BuildServerSideRenderer>false</BuildServerSideRenderer>
+    <UserSecretsId>27a80357-3806-420f-929e-f2d4d93a6a23</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="5.0.17" />
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="4.8.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Content Remove="$(SpaRoot)**" />
+    <Content Remove="ClientApp\src\app\Components\components\**" />
+    <Content Remove="ClientApp\src\app\Components\familia\**" />
+    <Content Remove="ClientApp\src\app\editar-familia\**" />
+    <Content Remove="ClientApp\src\app\familia\**" />
+    <None Remove="$(SpaRoot)**" />
+    <None Remove="ClientApp\src\app\Components\components\**" />
+    <None Remove="ClientApp\src\app\Components\familia\**" />
+    <None Remove="ClientApp\src\app\editar-familia\**" />
+    <None Remove="ClientApp\src\app\familia\**" />
+    <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="ClientApp\src\app\Components\components\**" />
+    <Compile Remove="ClientApp\src\app\Components\familia\**" />
+    <Compile Remove="ClientApp\src\app\editar-familia\**" />
+    <Compile Remove="ClientApp\src\app\familia\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\Components\components\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\Components\familia\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\editar-familia\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\familia\**" />
+    <TypeScriptCompile Remove="ClientApp\src\app\Components\components\**" />
+    <TypeScriptCompile Remove="ClientApp\src\app\Components\familia\**" />
+    <TypeScriptCompile Remove="ClientApp\src\app\editar-familia\**" />
+    <TypeScriptCompile Remove="ClientApp\src\app\familia\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\src\app\Components\components\curso\listar-curso\listar-curso.component.css" />
+    <None Remove="ClientApp\src\app\Components\components\curso\listar-curso\listar-curso.component.html" />
+    <None Remove="ClientApp\src\app\Components\components\curso\listar-curso\listar-curso.component.spec.ts" />
+    <None Remove="ClientApp\src\app\Components\components\curso\listar-curso\listar-curso.component.ts" />
+    <None Remove="ClientApp\src\app\Components\familia\editar-familia\editar-familia.component.css" />
+    <None Remove="ClientApp\src\app\Components\familia\editar-familia\editar-familia.component.html" />
+    <None Remove="ClientApp\src\app\Components\familia\editar-familia\editar-familia.component.spec.ts" />
+    <None Remove="ClientApp\src\app\Components\familia\editar-familia\editar-familia.component.ts" />
+    <None Remove="ClientApp\src\app\Components\familia\listar-familia\listar-familia.component.css" />
+    <None Remove="ClientApp\src\app\Components\familia\listar-familia\listar-familia.component.html" />
+    <None Remove="ClientApp\src\app\Components\familia\listar-familia\listar-familia.component.spec.ts" />
+    <None Remove="ClientApp\src\app\Components\familia\listar-familia\listar-familia.component.ts" />
+    <None Remove="ClientApp\src\app\editar-familia\editar-familia.component.css" />
+    <None Remove="ClientApp\src\app\editar-familia\editar-familia.component.html" />
+    <None Remove="ClientApp\src\app\editar-familia\editar-familia.component.spec.ts" />
+    <None Remove="ClientApp\src\app\editar-familia\editar-familia.component.ts" />
+    <None Remove="ClientApp\src\app\familia.service.spec.ts" />
+    <None Remove="ClientApp\src\app\familia.service.ts" />
+    <None Remove="ClientApp\src\app\familia\editar-familia\editar-familia.component.css" />
+    <None Remove="ClientApp\src\app\familia\editar-familia\editar-familia.component.html" />
+    <None Remove="ClientApp\src\app\familia\editar-familia\editar-familia.component.spec.ts" />
+    <None Remove="ClientApp\src\app\familia\editar-familia\editar-familia.component.ts" />
+    <None Remove="ClientApp\src\app\Model\Alumno.ts" />
+    <None Remove="ClientApp\src\app\Model\Curso.ts" />
+    <None Remove="ClientApp\src\app\Model\Familia.ts" />
+    <None Remove="ClientApp\src\app\Model\Familias.ts" />
+    <None Remove="ClientApp\src\app\Model\Respuesta.ts" />
+    <None Remove="ClientApp\src\app\Model\Seccion.ts" />
+    <None Remove="ClientApp\src\app\Services\curso.service.spec.ts" />
+    <None Remove="ClientApp\src\app\Services\curso.service.ts" />
+    <None Remove="ClientApp\src\app\Services\familia.service.spec.ts" />
+    <None Remove="ClientApp\src\app\Services\familia.service.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Remove="ClientApp\src\app\familia.service.spec.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\app\familia.service.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\app\Model\Familia.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\app\Services\curso.service.spec.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\app\Services\curso.service.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\app\Services\familia.service.spec.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\app\Services\familia.service.ts" />
+  </ItemGroup>
+
+  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+  </Target>
+
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build -- --prod" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build:ssr -- --prod" Condition=" '$(BuildServerSideRenderer)' == 'true' " />
+
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="$(SpaRoot)dist\**; $(SpaRoot)dist-server\**" />
+      <DistFiles Include="$(SpaRoot)node_modules\**" Condition="'$(BuildServerSideRenderer)' == 'true'" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

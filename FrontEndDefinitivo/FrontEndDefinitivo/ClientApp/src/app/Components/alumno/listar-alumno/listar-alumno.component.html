@@ -1,0 +1,23 @@
+<button class="btn btn-primary" (click)="CrearAlumno()">Crear Alumno</button>
+<table id_alumno="customers" class="table table-striped table-light">
+  <tr>
+    <th>Id_alumno</th>
+    <th>Nombre_alumno</th>
+    <th>Apellido_alumno</th>
+    <th>Correo</th>
+    <th>Usuario</th>
+  </tr>
+  <tbody>
+    <tr *ngFor="let alumno of alumnos">
+      <td>{{alumno.id_alumno}}</td>
+      <td>{{alumno.nombre_alumno}}</td>
+      <td>{{alumno.apellido_alumno}}</td>
+      <td>{{alumno.correo}}</td>
+      <td>{{alumno.usuario}}</td>
+      <td>
+        <button class="btn btn-dark" (click)="EditarAlumno(alumno.id_alumno)" style="margin-right: 15px; ">Editar</button>
+        <button class="btn btn-dark" (click)="EliminarAlumno(alumno.id_alumno)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,40 @@
+<div class="container">
+  <form [formGroup]="crearform" (ngSubmit)="postAlumno(crearform.value)">
+    <div class="form-group row">
+      <div class="col">
+        <label for="exampleFormControlInput1">Identificacion_Alumno</label>
+        <input type="number" class="form-control" formControlName="id_alumno">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Nombres</label>
+      <input type="text" class="form-control" formControlName="nombre_alumno">
+    </div>
+
+
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Apellidos</label>
+      <input type="text" class="form-control" formControlName="apellido_alumno">
+    </div>
+
+    <div class="form-group row">
+      <div class="col">
+        <label for="exampleFormControlInput1">Correo</label>
+        <input type="text" class="form-control" formControlName="correo">
+      </div>
+
+      <div class="col">
+        <label for="exampleFormControlInput1">Contrasena</label>
+        <input type="text" class="form-control" formControlName="contraseña">
+      </div>
+      <div class="col">
+        <label for="exampleFormControlInput1">Usuario</label>
+        <input type="text" class="form-control" formControlName="usuario">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-success" style="margin-bottom:20px;">Guardar</button>
+    <button type="button" class="btn btn-dark" style="margin-bottom:20px; margin-left: 15px;" (click)="Salir()">Salir</button>
+  </form>
+
+</div>

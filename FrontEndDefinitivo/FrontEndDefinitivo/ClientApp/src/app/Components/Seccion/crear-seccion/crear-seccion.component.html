@@ -1,0 +1,31 @@
+<div class="container">
+  <form [formGroup]="crearSeccionform" (ngSubmit)="postSeccion(crearSeccionform.value)">
+    <div class="form-group row">
+      <div class="col">
+        <label for="exampleFormControlInput1">Identificacion Seccion</label>
+        <input type="number" class="form-control" formControlName="id_seccion">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Aula</label>
+      <input type="number" class="form-control" formControlName="aula_sec">
+    </div>
+
+
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Fecha</label>
+      <input type="date" class="form-control" formControlName="fecha_registro_seccion">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Curso</label>
+      <input type="number" class="form-control" formControlName="id_curso">
+    </div>
+
+    <button type="submit" class="btn btn-success" style="margin-bottom:20px;">Guardar</button>
+    <button type="button" class="btn btn-dark" style="margin-bottom:20px; margin-left: 15px;" (click)="Salir()">Salir</button>
+  </form>
+
+</div>
+
